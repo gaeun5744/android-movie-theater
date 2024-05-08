@@ -5,7 +5,6 @@ import woowacourse.movie.model.Movie
 import woowacourse.movie.model.MovieReservation
 import woowacourse.movie.model.MovieTheater
 import woowacourse.movie.model.ScreeningMovie
-import woowacourse.movie.model.Seat
 import woowacourse.movie.model.SelectedSeats
 import java.time.LocalDateTime
 
@@ -32,10 +31,4 @@ interface MovieRepository {
     ): Long
 
     fun movieReservationById(id: Long): MovieReservation
-
-    fun seatByTheaterId(
-        row: Int,
-        col: Int,
-        theaterId: Long,
-    ): Seat
 }
